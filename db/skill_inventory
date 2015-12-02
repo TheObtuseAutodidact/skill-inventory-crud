@@ -1,0 +1,9 @@
+---
+skills:
+- id: 1
+  name: testing!!
+  status: testing123
+- id: 2
+  name: this
+  status: that
+total: 3

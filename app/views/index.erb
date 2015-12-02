@@ -1,0 +1,17 @@
+<h1>testing</h1>
+<div class='container'>
+  <% @skills.each do |skill| %>
+  <div class='well'>
+    <h3><%= skill.id %>:<a href="/skills/<%= skill.id %>"><%= skill.name %></a></h3>
+    <a href="/skills/<%= skill.id %>/edit">Edit</a>
+    <form action="/skills/<%= skill.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type='submit' value="delete">
+    </form>
+  </div>
+  <% end %>
+
+  <div class='col-md-3'>
+    <button type='button' class='btn btn-warning btn-block'><a href="/skills/new">Add Skill</a></button>
+  </div>
+</div>
