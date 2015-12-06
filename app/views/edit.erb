@@ -2,7 +2,7 @@
 
 <form action="/skills/<%= @skill.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-  <input type='text' name='skill[name]' value="<%= @skill.name %>" /><br/>
-  <textarea name='skill[status]'><%= @skill.status %></textarea><br/>
-  <input type='submit'/>
+  <input id="skill-name" type='text' name='skill[name]' value="<%= @skill.name %>" /><br/>
+  <textarea id="skill-status" name='skill[status]'><%= @skill.status %></textarea><br/>
+  <input id="update skill" type='submit'/>
 </form>

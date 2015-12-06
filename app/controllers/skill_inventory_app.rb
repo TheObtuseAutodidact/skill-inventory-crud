@@ -1,4 +1,4 @@
-require 'models/skill_inventory'
+# require 'models/skill_inventory'
 
 class SkillInventoryApp < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
