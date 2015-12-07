@@ -1,8 +1,17 @@
-<h1>Level Up Those Skills</h1>
-
-<form action="/skills/<%= @skill.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input id="skill-name" type='text' name='skill[name]' value="<%= @skill.name %>" /><br/>
-  <textarea id="skill-status" name='skill[status]'><%= @skill.status %></textarea><br/>
-  <input id="update skill" type='submit'/>
-</form>
+<div class="container-fluid">
+  <h3>Level Up Those Skills</h3>
+    <div class="well">
+  <form role="form" action="/skills/<%= @skill.id %>" method="post">
+    <div class="form-group">
+        <label class="form-align" for="skill_name">Skill Name</label>
+      <input class="form-control" type="hidden" name="_method" value="put">
+      <input id="skill-name" type='text' name='skill[name]' value="<%= @skill.name %>" /><br/>
+    </div>
+    <div>
+      <label class='skill-status' for="skill_status">Skill Status</label>
+    <textarea class='skill-status' name='skill[status]'><%= @skill.status %></textarea><br/>
+  </div>
+    <input id="update skill" type='submit'/>
+  </form>
+  </div>
+</div>

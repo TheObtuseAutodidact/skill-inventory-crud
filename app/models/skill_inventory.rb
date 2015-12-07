@@ -1,5 +1,4 @@
 require 'yaml/store'
-# require_relative 'skill'
 
 class SkillInventory
   def self.database
@@ -12,12 +11,6 @@ class SkillInventory
 
   def self.create(skill)
     database.from(:skills).insert(name: skill[:name], status: skill[:status])
-    # database.transaction do
-    #   database['skills'] ||= []
-    #   database['total'] ||= 0
-    #   database['total'] += 1
-    #   database['skills'] << { "id" => database['total'], "name" => skill[:name], "status" => skill[:status]}
-    # end
   end
 
   def self.raw_skills
@@ -27,16 +20,9 @@ class SkillInventory
   end
 
   def self.all
-    # binding.pry
     raw_data = database.from(:skills).to_a
     raw_data.map {|data| Skill.new(data) }
   end
-
-  # def self.raw_skill #(id)
-  #   # raw_skills.find { |skill| skill["id"] == id }
-  #
-  #   raw_data.map {|data| Skill.new(data)}
-  # end
 
   def self.find(id)
     # Skill.new(raw_skill(id))
@@ -46,11 +32,6 @@ class SkillInventory
 
   def self.update(id, data)
     database.from(:skills).where(id: id).update(data)
-    # database.transaction do
-    #   target = database['skills'].find { |data| data["id"] == id }
-    #   target["name"] = skill[:name]
-    #   target["status"] = skill[:status]
-    # end
   end
 
   def self.delete(id)

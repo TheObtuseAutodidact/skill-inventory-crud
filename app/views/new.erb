@@ -1,6 +1,16 @@
-<form action="/skills" method="post">
-  <p>Enter a new skill:</p>
-  <input type='text' name='skill[name]'/><br/>
-  <textarea name='skill[status]'></textarea><br/>
+<div class="container-fluid">
+  <h3>Enter a New Skill</h3>
+  <div class="well">
+<form role="form" action="/skills" method="post">
+  <div class="form-group">
+      <label class="form-align" for="skill_name">Skill Name</label>
+    <input class="form-control" type='text' name='skill[name]'/><br/>
+  </div>
+  <div>
+      <label class="skill-status" for="skill_status">Skill Status</label>
+    <textarea class "skill-status" name='skill[status]'></textarea><br/>
+  </div>
   <input id='submit' type='submit'/>
 </form>
+  </div>
+</div>

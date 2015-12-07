@@ -6,8 +6,20 @@
   <title>Skill Inventory</title>
 </head>
 <body>
-  <h1 id="banner">I have a +1 in Sinatra!</h1>
-  <%= yield %>
+  <header>
+    <%= erb :show_nav %>
+
+    <h3 id="banner">Building Skills and Adding New Ones</h3>
+
+  </header>
+  <section>
+    <%= yield %>
+  </section>
+    <footer>
+      <div class="container-fluid">
+        <%= erb :footer %>
+      </div>
+    </footer>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src='js/bootstrap.js'></script>

@@ -8,7 +8,7 @@ class UserSeesSiteHeadingOnHomePageTest < FeatureTest
     # Then I see Skill Inventory
     #save_and_open_page
     within("body") do
-      assert page.has_content?("I have a")
+      assert page.has_content?("pointless")
     end
   end
 end
